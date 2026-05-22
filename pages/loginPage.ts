@@ -1,6 +1,8 @@
 import{Page} from '@playwright/test'
 import{DashboardPage} from '../pages/dashboardPage';
 
+import testData from '../testdata/testData.json'
+
 export class LoginPage{
     readonly page:Page;
     
@@ -26,10 +28,10 @@ get errormessage(){
 async gotologinPage(){
     await this.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 }
-async login(Username:string,Password: string){
+async login(username:string,password: string){
 await this.gotologinPage();
-await this.usernameInput.fill(Username);
-await this.passwordInput.fill(Password);
+await this.usernameInput.fill(username);
+await this.passwordInput.fill(password);
 await this.loginButton.click();
 }
 }

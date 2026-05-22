@@ -3,15 +3,15 @@ import{test,expect} from '@playwright/test';
 //import{PimPage} from '../pages/pimPage';
 //import{DashboardPage} from '../pages/dashboardPage';
 import{PageManager} from '../pages/pageManager';
-//import testData from '../testdata/testData.json';
+import testData from '../testdata/testData.json';
 
 
 test('add a new employee', async({page})=>{
     const pm= new PageManager(page);
     //const loginPage=new  LoginPage(page);
 await pm.loginPage.gotologinPage(); //call method gotologinPage from loginPage
-await pm.loginPage.login("Admin","admin123"); //call method login from loginPage
-//await pm.loginPage.login(testData.username,testData.password); //call method login from loginPage
+//await pm.loginPage.login("Admin","admin123"); //call method login from loginPage
+await pm.loginPage.login(testData.username,testData.password); //call method login from loginPage
 
 //const dashboardPage = new DashboardPage(page);
    
