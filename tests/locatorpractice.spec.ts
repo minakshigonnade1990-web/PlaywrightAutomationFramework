@@ -15,7 +15,7 @@ test('getByPlaceholder',async({ page})=>{
     await page.getByPlaceholder('Enter first & last name').fill('Minakshi Parate');
     await page.waitForTimeout(2000);
 });
-test.only('getByLabel',async({ page})=>{
+test('getByLabel',async({ page})=>{
     await page.goto('https://xqa.io/practice/text-box');
     await page.getByLabel('userName').fill('Minakshi');
      await page.waitForTimeout(2000);
