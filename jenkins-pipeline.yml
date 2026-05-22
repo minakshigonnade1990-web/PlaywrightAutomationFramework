@@ -1,0 +1,44 @@
+- job:
+    name: PlaywrightAutomationFramework-main
+    project-type: pipeline
+    description: "Jenkins pipeline for main branch of the PlaywrightAutomationFramework GitHub repo"
+    scm:
+      - git:
+          url: "https://github.com/minakshigonnade1990-web/PlaywrightAutomationFramework.git"
+          branches:
+            - "main"
+    triggers:
+      - scm: "H/15 * * * *"
+    builders:
+      - pipeline:
+          script: |
+            pipeline {
+              agent any
+              stages {
+                stage('Checkout') {
+                  steps {
+                    checkout scm
+                  }
+                }
+                stage('Install dependencies') {
+                  steps {
+                    sh 'npm ci'
+                  }
+                }
+                stage('Install Playwright browsers') {
+                  steps {
+                    sh 'npx playwright install --with-deps'
+                  }
+                }
+                stage('Run Playwright tests') {
+                  steps {
+                    sh 'npx playwright test'
+                  }
+                }
+              }
+              post {
+                always {
+                  archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
+                }
+              }
+            }
