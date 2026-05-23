@@ -9,7 +9,7 @@ test('verifyRdioButton',async({page})=> {
 console.log(await page.locator('.field').locator('#yes').isChecked());
  await page.pause();
 });
-test.only('verify check button',async({page})=>{
+test('verify check button',async({page})=>{
 await page.goto('https://letcode.in/radio');
 await page.getByLabel(' Remember me ').check();
 await expect( page.getByLabel(' Remember me ')).toBeChecked();
