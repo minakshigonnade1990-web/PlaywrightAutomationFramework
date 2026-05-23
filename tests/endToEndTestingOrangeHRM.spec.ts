@@ -91,10 +91,10 @@ const month=" April";
 // await expect(page.getByLabel ("Male", {exact: true})).toBeChecked();
 
  // maritial status
-//  const maritailDropdown= page.locator('.oxd-input-group')
-//  .filter({has: page.locator('label',{hasText:" Marital Status"})})
-//  .locator('.oxd-select-text.oxd-select-text--active');
-//  await maritailDropdown.locator('.oxd-select-text-input').getByText('Single').click();
+ const maritailDropdown= page.locator('.oxd-input-group')
+ .filter({has: page.locator('label',{hasText:" Marital Status"})})
+ .locator('.oxd-select-text.oxd-select-text--active');
+ await maritailDropdown.locator('.oxd-select-text-input').getByText('Single').click();
 
 await page.locator('.oxd-form-actions').filter({hasText:' * Required'})
 .getByRole('button',{name:"  Save "}).click();

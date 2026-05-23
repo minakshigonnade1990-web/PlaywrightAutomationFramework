@@ -30,7 +30,7 @@ test('Prompt alert',async({page})=>{
     await page.waitForTimeout(5000);
    // await expect(page.locator('#myName')).toContainText('Playwright alert');
 });
-test.only('Modern Alert',async({page})=>{
+test('Modern Alert',async({page})=>{
     await page.goto('https://letcode.in/alert');
     await page.getByRole('button',{name: 'Modern Alert'}).click();
     console.log(await page.locator('.modal-content').textContent());
