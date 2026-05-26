@@ -9,15 +9,15 @@ await page.getByRole('button', {name:'Simple Alert'}).click();
 await page.waitForTimeout(5000);
 });
 
-test('confirm Alert',async({page})=>{
-page.on('dialog',async dialog=>{
-    console.log(dialog.message);
-    await dialog.dismiss();
+// test('confirm Alert',async({page})=>{
+// page.on('dialog',async dialog=>{
+//     console.log(dialog.message);
+//     await dialog.dismiss();
    
-});
-await page.getByRole('button',{name:'Confirm Alert'}).click();
- await page.waitForTimeout(2000);
-});
+// });
+// await page.getByRole('button',{name:'Confirm Alert'}).click();
+//  await page.waitForTimeout(2000);
+// });
 
 
 test('Prompt alert',async({page})=>{

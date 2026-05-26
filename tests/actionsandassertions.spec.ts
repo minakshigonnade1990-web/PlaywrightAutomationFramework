@@ -11,7 +11,7 @@ test('actionsAndAssertions', async({page})=>{
    await page.waitForTimeout(2000);
    //test input methods
 
-   await page.getByPlaceholder('name@example.com').type('abac@gmail.com');
+   await page.getByPlaceholder('name@example.com').fill('abac@gmail.com');
    await page.getByLabel('Current Address').pressSequentially('175,Manish Ngar',{delay:150});
    await page.getByLabel('Permanent Address').fill('permanent example address');
 
@@ -23,7 +23,7 @@ test('actionsAndAssertions', async({page})=>{
     await expect(page.locator('#output').locator('#currentAddress')
    .filter({hasText: ' 175,Manish Ngar'})).toBeVisible();
    await page.goto('https://xqa.io/practice/check-box');
-   await page.pause();
+   //await page.pause();
    await page.goBack();
    await page.goForward();
    await page.reload();
