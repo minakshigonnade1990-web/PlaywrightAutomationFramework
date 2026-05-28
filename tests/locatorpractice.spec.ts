@@ -25,9 +25,9 @@ test('getByText', async({page})=>{
     await page.getByRole('link',{name:'Click'}).click();
     await page.getByText('Goto Home').first().click();
 });
-//test('getByTestId', async({page})=>{
-//await page.goto('https://www.saucedemo.com/');
-//await page.getByTestId('Username').fill('standard_user');
-//await page.getByTestId('Password').fill('secret_sauce');
-//await page.getByTestId('Login').click();
-//});
+// test('getByTestId', async({page})=>{
+// await page.goto('https://www.saucedemo.com/');
+// await page.getByTestId('user-name').fill('standard_user');
+// await page.getByTestId('password').fill('secret_sauce');
+// await page.getByTestId('login-button').click();
+// });

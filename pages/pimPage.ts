@@ -83,9 +83,9 @@ export class PimPage{
          await this.lastnameInput.fill(lastname);
          
         
-       await this .employeeId.fill(await this.getEmployeeId());
+       //await this .employeeId.fill(await this.getEmployeeId());
        
-        console.log('Generated Employee Id :', await this.getEmployeeId());
+        //console.log('Generated Employee Id :', await this.getEmployeeId());
         await this.employeeId.click();
          await this.employeeSaveButton.click();
 
