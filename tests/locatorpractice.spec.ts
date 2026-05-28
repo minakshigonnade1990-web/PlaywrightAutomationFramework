@@ -19,7 +19,7 @@ test('getByPlaceholder',async({ page})=>{
 //     await page.goto('https://xqa.io/practice/text-box');
 //     await page.getByLabel('userName').fill('Minakshi');
 //      await page.waitForTimeout(2000);
-// });
+});
 test('getByText', async({page})=>{
     await page.goto('https://letcode.in/test');
     await page.getByRole('link',{name:'Click'}).click();

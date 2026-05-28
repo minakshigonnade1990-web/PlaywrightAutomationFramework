@@ -30,16 +30,13 @@ await pm.pimPage.addEmployee(userdata.firstName, userdata.middleName, userdata.l
  await pm.pimPage.calenderInput.fill("1990-27-05");
  await expect(pm.pimPage.calenderInput).toHaveValue("1990-27-05");
 
-   // await expect(pm.pimPage.calenderLicenceInput).toHaveValue("1990-27-05");
-   
-    await pm.pimPage.dateOfBirthInput.getByText('2026').click();
+await pm.pimPage.dateOfBirthInput.getByText('2026').click();
 await pm.pimPage.dateOfBirthInput.getByText("2017").click()
 await pm.pimPage.dateOfBirthInput.getByText("May").click()
 await pm.pimPage.dateOfBirthInput.getByText("April").click();
 await pm.pimPage.dateOfBirthInput.getByText("15").click();
 await expect(pm.pimPage.calenderInput).toHaveValue("2017-15-04");
-//await expect(pm.pimPage.dateOfBirthInput).toHaveValue("2017-04-15", {exact:true});
-//await expect(pm.pimPage.dateOfBirthInput).toHaveValue("2017-15-04");
+
 await pm.pimPage.saveButton1.click()
 
 
