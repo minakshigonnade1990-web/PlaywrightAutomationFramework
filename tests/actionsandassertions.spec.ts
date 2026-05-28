@@ -23,7 +23,7 @@ test('actionsAndAssertions', async({page})=>{
     await expect(page.locator('#output').locator('#currentAddress')
    .filter({hasText: ' 175,Manish Ngar'})).toBeVisible();
    await page.goto('https://xqa.io/practice/check-box');
-   await page.pause();
+  // await page.pause();
    await page.goBack();
    await page.goForward();
    await page.reload();
